@@ -1,0 +1,19 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,45678,e=>{"use strict";var n=e.i(43476),t=e.i(71645);let o=[{href:"#about",label:"About"},{href:"#results",label:"Results"},{href:"#portfolio",label:"Portfolio"},{href:"#services",label:"Services"},{href:"#career",label:"Career"},{href:"#contact",label:"Contact"}];e.s(["default",0,function(){let[e,l]=(0,t.useState)(!1);return(0,t.useEffect)(()=>{let e=()=>l(window.scrollY>50);return window.addEventListener("scroll",e),()=>window.removeEventListener("scroll",e)},[]),(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)("style",{dangerouslySetInnerHTML:{__html:`
+        #menu-toggle { display: none; }
+        
+        /* Burger icon: show ☰, hide ✕ */
+        #menu-toggle:not(:checked) ~ nav .icon-open { display: flex; }
+        #menu-toggle:not(:checked) ~ nav .icon-close { display: none; }
+        
+        /* When open: show ✕, hide ☰ */
+        #menu-toggle:checked ~ nav .icon-open { display: none; }
+        #menu-toggle:checked ~ nav .icon-close { display: flex; }
+        
+        /* Menu hidden by default */
+        #menu-toggle:not(:checked) ~ nav #nav-menu { display: none; }
+        #menu-toggle:checked ~ nav #nav-menu { display: flex; }
+        
+        /* Summary marker removal */
+        summary::-webkit-details-marker { display: none; }
+        summary::marker { display: none; content: ""; }
+      `}}),(0,n.jsx)("input",{type:"checkbox",id:"menu-toggle",style:{display:"none",position:"absolute",pointerEvents:"none"}}),(0,n.jsxs)("nav",{style:{position:"fixed",top:0,left:0,right:0,zIndex:99999,backgroundColor:e?"rgba(15,23,42,0.95)":"rgba(15,23,42,0.7)",backdropFilter:"blur(8px)",WebkitBackdropFilter:"blur(8px)"},children:[(0,n.jsxs)("div",{style:{maxWidth:1152,margin:"0 auto",padding:"16px 24px",display:"flex",alignItems:"center",justifyContent:"space-between"},children:[(0,n.jsx)("a",{href:"#",style:{fontSize:20,fontWeight:700,color:"#3b82f6",textDecoration:"none"},children:"MM"}),(0,n.jsxs)("div",{className:"hidden md:flex",style:{alignItems:"center",gap:32},children:[o.map(e=>(0,n.jsx)("a",{href:e.href,style:{fontSize:14,color:"#94a3b8",textDecoration:"none"},children:e.label},e.href)),(0,n.jsx)("a",{href:"https://calendar.notion.so/meet/muhamadmuslih/quickchat",target:"_blank",rel:"noopener noreferrer",style:{fontSize:14,backgroundColor:"#3b82f6",color:"white",padding:"8px 16px",borderRadius:8,textDecoration:"none"},children:"Book a Chat"})]}),(0,n.jsxs)("label",{htmlFor:"menu-toggle",className:"md:hidden",style:{width:48,height:48,cursor:"pointer",touchAction:"manipulation",alignItems:"center",justifyContent:"center"},children:[(0,n.jsx)("span",{className:"icon-open",style:{fontSize:22,color:"#f1f5f9",lineHeight:1,width:48,height:48,alignItems:"center",justifyContent:"center"},children:"☰"}),(0,n.jsx)("span",{className:"icon-close",style:{fontSize:22,color:"#f1f5f9",lineHeight:1,width:48,height:48,alignItems:"center",justifyContent:"center"},children:"✕"})]})]}),(0,n.jsxs)("div",{id:"nav-menu",className:"md:hidden",style:{flexDirection:"column",backgroundColor:"#1e293b",borderTop:"1px solid #334155",padding:"8px 24px 24px"},children:[o.map(e=>(0,n.jsx)("label",{htmlFor:"menu-toggle","data-href":e.href,className:"nav-menu-link",style:{display:"block",color:"#cbd5e1",fontSize:16,padding:"14px 0",borderBottom:"1px solid #334155",cursor:"pointer"},children:e.label},e.href)),(0,n.jsx)("a",{href:"https://calendar.notion.so/meet/muhamadmuslih/quickchat",target:"_blank",rel:"noopener noreferrer",style:{display:"block",backgroundColor:"#3b82f6",color:"white",padding:"12px 16px",borderRadius:8,textAlign:"center",fontSize:14,fontWeight:500,textDecoration:"none",marginTop:16},children:"Book a Chat"})]})]})]})}])}]);
