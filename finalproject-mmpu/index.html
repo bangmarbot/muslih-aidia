@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Final Project — AI CFO for Indonesia's Mid-Market · Muhamad Muslih</title>
+<meta name="description" content="A master's final project (Business Plan & Feasibility Study) on an AI-driven finance-function service for Indonesia's mid-market enterprises. A living record of the work, from proposal to defence.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Final Project — An AI Finance Department for Indonesia's Mid-Market">
+<meta property="og:description" content="Business Plan & Feasibility Study · MM Technology, President University. A living consultation record.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315181d'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%237b6bf0' stroke-width='2.4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#15181d; --ink-2:#1b1f26; --paper:#ecebe7; --paper-2:#f4f3ef;
+  --on-dark:#eef0f3; --on-dark-soft:#aeb4c0; --on-dark-mut:#7b8290;
+  --on-light:#15181d; --on-light-soft:#41454d; --on-light-mut:#797d85;
+  --hair-dark:#2b313b; --hair-light:#d6d4cd;
+  --accent:#7b6bf0; --accent-soft:#8e80f3; --ok:#3a9f6f; --warn:#b5862a;
+  --maxw:1080px;
+  --disp:"Hanken Grotesk",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--on-dark);font-family:var(--disp);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:var(--accent);color:#fff}
+a{color:inherit;text-decoration:none}
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);z-index:60;width:0}
+.brand{position:fixed;top:22px;left:28px;z-index:50;font-family:var(--disp);font-weight:600;font-size:18px;letter-spacing:-.02em;color:#fff;mix-blend-mode:difference}
+.brand i{font-style:normal;color:var(--accent-soft)}
+
+section{padding:clamp(70px,12vh,128px) 0;border-bottom:1px solid var(--hair-dark)}
+section.light{background:var(--paper);color:var(--on-light);border-bottom-color:var(--hair-light)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;margin:0 0 30px;display:flex;align-items:center;gap:13px;color:var(--on-dark-mut)}
+section.light .eyebrow{color:var(--on-light-mut)}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--accent)}
+
+h1.hero{font-family:var(--disp);font-weight:300;font-size:clamp(40px,7.4vw,86px);line-height:1.0;letter-spacing:-.035em;margin:0 0 26px;max-width:15ch}
+h2.big{font-family:var(--disp);font-weight:300;font-size:clamp(29px,4.6vw,54px);line-height:1.05;letter-spacing:-.03em;margin:0 0 26px;max-width:22ch}
+.lede{font-size:clamp(18px,2vw,22px);font-weight:400;line-height:1.55;max-width:62ch;color:var(--on-dark-soft)}
+section.light .lede{color:var(--on-light-soft)}
+.accent{color:var(--accent-soft)} section.light .accent{color:var(--accent)}
+p.body{font-size:clamp(16px,1.6vw,18.5px);line-height:1.6;max-width:66ch;color:var(--on-light-soft);margin:0 0 16px}
+section.dark p.body{color:var(--on-dark-soft)}
+strong{font-weight:600;color:var(--on-light)} section.dark strong{color:var(--on-dark)}
+
+/* hero meta */
+.hero-sub{font-size:clamp(18px,2vw,23px);color:var(--on-dark-soft);max-width:52ch;line-height:1.5;margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:11px 34px;margin-top:46px;font-family:var(--mono);font-size:13px;color:var(--on-dark-mut)}
+.meta div{display:flex;flex-direction:column;gap:3px}
+.meta .ml{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-mut)}
+.meta b{color:var(--on-dark);font-weight:500;font-size:13.5px}
+
+/* central question */
+.cq{font-family:var(--disp);font-weight:300;font-size:clamp(26px,3.6vw,42px);line-height:1.2;letter-spacing:-.02em;max-width:24ch;margin:0 0 30px}
+.cq .accent{font-weight:400}
+
+/* stat band */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--hair-dark);border:1px solid var(--hair-dark);border-radius:5px;overflow:hidden;margin:8px 0 0}
+.stats .s{background:var(--ink-2);padding:30px 26px}
+.stats .s b{display:block;font-family:var(--disp);font-weight:300;font-size:clamp(34px,5vw,52px);line-height:1;letter-spacing:-.03em;color:var(--on-dark)}
+.stats .s b .u{font-size:.5em;font-weight:400;color:var(--accent-soft);letter-spacing:0}
+.stats .s small{display:block;margin-top:12px;font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--on-dark-mut)}
+
+/* numbered rows */
+.rows{border-top:1px solid var(--hair-light);margin-top:6px}
+section.dark .rows{border-top-color:var(--hair-dark)}
+.row{display:grid;grid-template-columns:54px minmax(0,1fr) minmax(0,1.35fr);gap:24px;padding:28px 0;border-bottom:1px solid var(--hair-light);align-items:baseline}
+section.dark .row{border-bottom-color:var(--hair-dark)}
+.row .num{font-family:var(--mono);font-size:13px;color:var(--accent)}
+.row h3{font-family:var(--disp);font-weight:500;font-size:clamp(20px,2.5vw,29px);letter-spacing:-.02em;margin:0;color:var(--on-light)}
+section.dark .row h3{color:var(--on-dark)}
+.row p{margin:0;color:var(--on-light-soft);font-size:clamp(15px,1.55vw,17.5px);line-height:1.5}
+section.dark .row p{color:var(--on-dark-soft)}
+@media(max-width:720px){.row{grid-template-columns:40px 1fr;gap:6px 16px;padding:22px 0}.row p{grid-column:1/-1;padding-left:56px}}
+
+/* approach grid */
+.appr{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--hair-dark);border:1px solid var(--hair-dark);border-radius:5px;overflow:hidden;margin:6px 0 36px}
+.appr .a{background:var(--ink-2);padding:30px 26px}
+.appr .a .t{font-family:var(--disp);font-weight:600;font-size:clamp(19px,2.2vw,25px);margin:0 0 11px;color:var(--on-dark);letter-spacing:-.01em}
+.appr .a p{margin:0;font-size:clamp(14.5px,1.5vw,16.5px);color:var(--on-dark-soft);line-height:1.55}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:13px;font-family:var(--mono);font-size:14px;color:var(--on-dark-soft)}
+.flow b{color:var(--on-dark);font-weight:500;font-family:var(--disp);font-size:clamp(17px,2vw,22px)}
+.flow .arr{color:var(--accent);font-size:19px}
+
+/* roadmap */
+.road{display:grid;gap:14px;margin-top:6px}
+.rd{display:grid;grid-template-columns:130px 1fr;gap:22px;align-items:baseline;border:1px solid var(--hair-light);border-radius:10px;padding:22px 24px;background:var(--paper-2)}
+.rd .ph{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent)}
+.rd .ch{font-size:15.5px;color:var(--on-light-soft);line-height:1.55}
+.rd .ch b{color:var(--on-light);font-weight:600}
+@media(max-width:640px){.rd{grid-template-columns:1fr;gap:8px}}
+
+/* consultation log */
+.log{display:grid;gap:11px;margin-top:6px}
+.le{display:grid;grid-template-columns:64px 1fr auto;gap:18px;align-items:center;border:1px solid var(--hair-dark);border-radius:10px;padding:18px 22px;background:var(--ink-2)}
+.le .mtg{font-family:var(--mono);font-size:14px;color:var(--on-dark);font-weight:500}
+.le .ttl{font-size:15.5px;color:var(--on-dark-soft);line-height:1.45}
+.le .ttl b{color:var(--on-dark);font-weight:600;font-family:var(--disp)}
+.le .badge{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:999px;border:1px solid;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.le .badge .dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+.badge.now{color:var(--accent-soft);border-color:#3a3470;background:rgba(123,107,240,.12)}
+.badge.next{color:var(--on-dark-mut);border-color:var(--hair-dark)}
+.badge.done{color:var(--ok);border-color:#264a39;background:rgba(58,159,111,.1)}
+.le.dim{opacity:.62}
+@media(max-width:640px){.le{grid-template-columns:1fr;gap:8px}.le .badge{justify-self:start}}
+.agenda{margin:18px 0 0;border-left:2px solid var(--accent);padding:4px 0 4px 20px}
+.agenda .al{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-mut);margin:0 0 10px}
+.agenda ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.agenda li{font-size:15.5px;color:var(--on-dark-soft);line-height:1.45;padding-left:18px;position:relative}
+.agenda li::before{content:"→";position:absolute;left:0;color:var(--accent)}
+
+/* open questions */
+.oq{border-top:1px solid var(--hair-light);margin-top:6px}
+.oq .q{display:grid;grid-template-columns:34px 1fr;gap:16px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--hair-light)}
+.oq .q .mk{font-family:var(--mono);font-size:18px;color:var(--accent);line-height:1}
+.oq .q p{margin:0;font-family:var(--disp);font-weight:400;font-size:clamp(17px,2vw,24px);line-height:1.3;letter-spacing:-.012em;color:var(--on-light)}
+.oq .q small{display:block;margin-top:8px;font-family:var(--mono);font-size:12.5px;color:var(--on-light-mut);letter-spacing:0;line-height:1.6}
+
+/* footer */
+footer{background:var(--ink-2);padding:54px 0;border-bottom:0}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-end}
+footer .fl a{display:block;font-family:var(--mono);font-size:13px;color:var(--on-dark-soft);padding:5px 0;border-bottom:1px solid transparent;width:fit-content}
+footer .fl a:hover{color:var(--accent-soft)}
+footer .note{font-family:var(--mono);font-size:12px;color:var(--on-dark-mut);line-height:1.7;max-width:50ch;text-align:right}
+
+.r{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.r.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.r{opacity:1;transform:none}}
+@media(max-width:680px){.brand{top:16px;left:18px;font-size:16px}.meta{gap:10px 22px}}
+</style>
+</head>
+<body>
+<div class="progress" id="prog"></div>
+<a class="brand" href="https://muslih.aidia.uk">muslih<i>.</i></a>
+
+<!-- ===== HERO ===== -->
+<section class="dark">
+  <div class="wrap">
+    <p class="eyebrow r">Master of Technology Management · Final Project</p>
+    <h1 class="hero r">An AI finance department for Indonesia's mid-market.</h1>
+    <p class="hero-sub r">A Business Plan &amp; Feasibility Study of an AI-driven finance-function service — an <span class="accent">“AI CFO”</span> — for mid-market enterprises in Indonesia.</p>
+    <div class="meta r">
+      <div><span class="ml">Student</span><b>Muhamad Muslih</b></div>
+      <div><span class="ml">Supervisor</span><b>Assoc. Prof. Dr. S. R. Waworuntu, M.B.A.</b></div>
+      <div><span class="ml">Program</span><b>MM Technology, President University</b></div>
+      <div><span class="ml">Type</span><b>Business Plan / Feasibility</b></div>
+      <div><span class="ml">Timeline</span><b>2025.3 Proposal → 2026.1 Final Project</b></div>
+      <div><span class="ml">Status</span><b>Proposal phase · Meeting 1</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 BRIEF ===== -->
+<section class="light">
+  <div class="wrap">
+    <p class="eyebrow r">01 — The brief</p>
+    <p class="cq r"><span class="accent">Can</span> an AI-run finance function — with a licensed human at the judgment layer — be a viable and defensible business for Indonesia's mid-market?</p>
+    <p class="body r">This final project develops and tests a business plan for a service that gives a mid-market firm <strong>a finance department without the cost of building one</strong>. AI reads the firm's accounting data and answers everyday finance questions; a licensed accountant holds the judgment and the liability. The work is assessed on three fronts — a real market that can pay, a real pain worth solving, and a legal path to operate.</p>
+  </div>
+</section>
+
+<!-- ===== 02 PROBLEM ===== -->
+<section class="dark">
+  <div class="wrap">
+    <p class="eyebrow r">02 — The problem</p>
+    <h2 class="big r">Mid-market firms have outgrown the spreadsheet — but can't justify a CFO.</h2>
+    <div class="stats r">
+      <div class="s"><b>1,464</b><small>licensed public accountants for a population over 282 million (Feb 2023)</small></div>
+      <div class="s"><b>IDR 15–50<span class="u">B</span></b><small>annual turnover — the mid-market band (Gov. Reg. 7/2021)</small></div>
+      <div class="s"><b>~0.4–0.9<span class="u">M/mo</span></b><small>what the segment already pays for finance software</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03 CONCEPT ===== -->
+<section class="light">
+  <div class="wrap">
+    <p class="eyebrow r">03 — The concept</p>
+    <h2 class="big r">What is offered.</h2>
+    <div class="rows">
+      <div class="row r"><span class="num">01</span><h3>It does the work</h3><p>Connects to the firm's existing accounting system (e.g., Mekari Jurnal) and answers finance questions — cash, profit, receivables — in plain language.</p></div>
+      <div class="row r"><span class="num">02</span><h3>It earns trust</h3><p>Every figure is traceable to its source; a licensed human reviews the work and owns the decision. Designed against hallucination, not around it.</p></div>
+      <div class="row r"><span class="num">03</span><h3>The constraint is the moat</h3><p>Serving accounting to the public legally requires a licensed entity (Kantor Jasa Akuntan). The mandatory human layer is both compliance and a barrier to software-only competitors.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 APPROACH ===== -->
+<section class="dark">
+  <div class="wrap">
+    <p class="eyebrow r">04 — Strategic approach</p>
+    <h2 class="big r">Design Thinking, applied with the tools of strategic analysis.</h2>
+    <div class="appr r">
+      <div class="a"><div class="t">Design Thinking</div><p>A user-led, evidence-first method — validate the problem and the demand before committing to build.</p></div>
+      <div class="a"><div class="t">Strategic frameworks</div><p>PESTEL (regulatory axis first), Porter's Five Forces, VRIO, and the Business Model Canvas.</p></div>
+      <div class="a"><div class="t">Primary validation</div><p>Interviews with mid-market owners, finance leaders, and licensed accountants to test size, willingness-to-pay, and partnership economics.</p></div>
+    </div>
+    <div class="flow r"><b>Empathise</b><span class="arr">→</span><b>Define</b><span class="arr">→</span><b>Ideate</b><span class="arr">→</span><b>Prototype</b><span class="arr">→</span><b>Test</b></div>
+  </div>
+</section>
+
+<!-- ===== 05 ROADMAP ===== -->
+<section class="light">
+  <div class="wrap">
+    <p class="eyebrow r">05 — Structure &amp; roadmap</p>
+    <h2 class="big r">Five chapters, across two semesters.</h2>
+    <div class="road">
+      <div class="rd r"><div class="ph">2025.3 · Proposal</div><div class="ch"><b>Ch 1</b> Introduction &nbsp;·&nbsp; <b>Ch 2</b> Project / Idea &nbsp;·&nbsp; <b>Ch 3</b> Strategic Analysis</div></div>
+      <div class="rd r"><div class="ph">2026.1 · Final Project</div><div class="ch"><b>Ch 4</b> Implementation Plan — incl. the Financial Plan (NPV / IRR / ROI) &nbsp;·&nbsp; <b>Ch 5</b> Conclusion &nbsp;·&nbsp; Defence</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 CONSULTATION LOG ===== -->
+<section class="dark">
+  <div class="wrap">
+    <p class="eyebrow r">06 — Consultation log</p>
+    <h2 class="big r">A record of each advisory session.</h2>
+    <div class="log r">
+      <div class="le"><span class="mtg">M1</span><span class="ttl"><b>Overview</b> — topic, scope &amp; plan alignment</span><span class="badge now"><span class="dot"></span>Now</span></div>
+      <div class="le dim"><span class="mtg">M2</span><span class="ttl"><b>Chapter 1</b> — Introduction</span><span class="badge next">Upcoming</span></div>
+      <div class="le dim"><span class="mtg">M3</span><span class="ttl"><b>Chapter 2</b> — Project / Idea</span><span class="badge next">Upcoming</span></div>
+      <div class="le dim"><span class="mtg">M4</span><span class="ttl"><b>Chapter 3</b> — Strategic Analysis</span><span class="badge next">Upcoming</span></div>
+      <div class="le dim"><span class="mtg">M5–8</span><span class="ttl">Final-project phase — Ch 4, Ch 5, and defence</span><span class="badge next">Next semester</span></div>
+    </div>
+    <div class="agenda r">
+      <p class="al">Meeting 1 — agenda</p>
+      <ul>
+        <li>Present topic &amp; scope; seek direction on whether to widen or narrow.</li>
+        <li>Ask the supervisor's view on entity structure (governance &amp; funding).</li>
+        <li>Agree the meeting cadence and confirm the proposal deadline.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 07 OPEN QUESTIONS ===== -->
+<section class="light">
+  <div class="wrap">
+    <p class="eyebrow r">07 — Open questions</p>
+    <h2 class="big r">What this phase must resolve.</h2>
+    <div class="oq">
+      <div class="q r"><span class="mk">?</span><div><p>How should the venture be structured as an entity — and how does the product relate to the parent practice?</p><small>For the supervisor's input · bears on governance and the funding plan</small></div></div>
+      <div class="q r"><span class="mk">?</span><div><p>How large is the addressable mid-market, and what will firms actually pay for the service?</p><small>To validate · primary research, in progress</small></div></div>
+      <div class="q r"><span class="mk">?</span><div><p>What are the economics of partnering a licensed accountant (KJA)?</p><small>To validate · gates the Financial Plan</small></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fl">
+      <a href="https://muslih.aidia.uk">← muslih.aidia.uk</a>
+      <a href="https://lab.aidia.uk/ai-finance-dept.html">Research foundation — lab.aidia.uk ↗</a>
+    </div>
+    <p class="note">A personal study record for the master's final project, maintained across advisory sessions. Working document — figures and scope evolve as the work progresses.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var prog=document.getElementById('prog');
+  function onScroll(){
+    var h=document.documentElement, max=h.scrollHeight-h.clientHeight;
+    prog.style.width=(max>0?(h.scrollTop/max*100):0)+'%';
+  }
+  document.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.r').forEach(function(el){io.observe(el)});
+  } else { document.querySelectorAll('.r').forEach(function(el){el.classList.add('in')}); }
+})();
+</script>
+</body>
+</html>
